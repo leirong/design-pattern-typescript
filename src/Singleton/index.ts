@@ -3,6 +3,9 @@
  */
 class Singleton {
   private static instance: Singleton
+  /**
+   * 私有化构造函数，防止外部实例化
+   */
   private constructor() {}
   static getInstance() {
     if (!this.instance) {
