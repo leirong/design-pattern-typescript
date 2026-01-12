@@ -5,3 +5,4 @@
 ## 目录
 
 - [单例模式](src/Singleton/index.ts)
+- [工厂方法模式](src/FactoryMethod/index.ts)
