@@ -10,3 +10,7 @@
 - [工厂方法模式](src/FactoryMethod/index.ts)
 - [建造者模式](src/Builder/index.ts)
 - [抽象工厂模式](src/AbstractFactory/index.ts)
+
+### 结构型模式
+
+- [适配器模式](src/Adapter/index.ts)
