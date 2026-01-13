@@ -54,6 +54,8 @@ export class MultiNotice extends Notice {
 /** 延迟通知 */
 export class DelayNotice extends Notice {
   send(to: string): void {
-    this.sender.send(to, '这是一条延迟通知')
+    setTimeout(() => {
+      this.sender.send(to, '这是一条延迟通知')
+    }, 2000)
   }
 }
