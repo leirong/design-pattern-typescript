@@ -14,3 +14,4 @@
 ### 结构型模式
 
 - [适配器模式](src/Adapter/index.ts)
+- [桥接模式](src/Bridge/index.ts)
