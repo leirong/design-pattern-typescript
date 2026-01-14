@@ -15,8 +15,9 @@ export class Leaf extends Component {
     return this.price
   }
 }
+
 /**
- * 组合节点
+ * 组合节点，默认全价计算
  */
 export class Composite extends Component {
   private children: Component[] = []
@@ -52,9 +53,9 @@ export class HalfPriceComposite extends Component {
     }
     return this.children.reduce((prev, cur, index) => {
       if (index % 2 === 0) {
-        return prev + cur.getPrice() / 2
-      } else {
         return prev + cur.getPrice()
+      } else {
+        return prev + cur.getPrice() / 2
       }
     }, 0)
   }
@@ -63,7 +64,6 @@ export class HalfPriceComposite extends Component {
 /**
  * 组合节点, 满减
  */
-
 export class DiscountPriceComposite extends Component {
   private children: Component[] = []
   constructor(private threshold: number, private discount: number) {
