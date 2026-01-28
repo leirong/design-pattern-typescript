@@ -16,3 +16,4 @@
 - [适配器模式](src/Adapter/index.ts)
 - [桥接模式](src/Bridge/index.ts)
 - [组合模式](src/Composite/index.ts)
+- [装饰器模式](src/Decorator/index.ts)
