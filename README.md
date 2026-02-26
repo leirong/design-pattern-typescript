@@ -18,3 +18,7 @@
 - [组合模式](src/Composite/index.ts)
 - [装饰器模式](src/Decorator/index.ts)
 - [外观模式](src/Facade/index.ts)
+
+### 行为型模式
+
+- [责任链模式](src/ChainOfResponsibility/index.ts)
