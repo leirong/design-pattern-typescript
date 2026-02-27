@@ -22,3 +22,4 @@
 ### 行为型模式
 
 - [责任链模式](src/ChainOfResponsibility/index.ts)
+- [中介者模式](src/Mediator/index.ts)
