@@ -15,7 +15,7 @@ class SubsystemB {
 }
 
 // 外观类
-class Facade {
+export class Facade {
   private subsystemA: SubsystemA
   private subsystemB: SubsystemB
 
