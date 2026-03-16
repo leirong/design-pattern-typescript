@@ -23,7 +23,7 @@ export class Singleton {
 class SingletonByESModule {
   constructor() {}
 }
-export default new SingletonByESModule()
+export const ESMSingleton = new SingletonByESModule()
 
 /**
  * 利用闭包实现单例模式
