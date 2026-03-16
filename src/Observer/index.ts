@@ -54,11 +54,3 @@ export class Observer2 implements Observer {
     console.log('👉 观察者2收到通知')
   }
 }
-
-const subject = new Subject()
-const observer1 = new Observer1()
-const observer2 = new Observer2()
-
-subject.on(observer1)
-subject.on(observer2)
-subject.emit()
