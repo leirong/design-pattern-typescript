@@ -24,3 +24,4 @@
 - [责任链模式](src/ChainOfResponsibility/index.ts)
 - [中介者模式](src/Mediator/index.ts)
 - [观察者模式](src/Observer/index.ts)
+- [状态模式](src/State/index.ts)
