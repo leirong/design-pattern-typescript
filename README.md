@@ -25,3 +25,4 @@
 - [中介者模式](src/Mediator/index.ts)
 - [观察者模式](src/Observer/index.ts)
 - [状态模式](src/State/index.ts)
+- [策略模式](src/Strategy/index.ts)
