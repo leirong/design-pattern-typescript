@@ -1,5 +1,8 @@
 // 组合模式：将对象组合成树形结构以表示“部分-整体”的层次结构，使得用户对单个对象和组合对象的使用具有一致性
 
+/**
+ * 抽象组件，定义了叶子节点和组合节点的公共接口，具体的叶子节点和组合节点需要继承这个类并实现getPrice方法
+ */
 abstract class Component {
   abstract getPrice(): number
 }
@@ -8,7 +11,10 @@ abstract class Component {
  * 叶子节点
  */
 export class Leaf extends Component {
-  constructor(private name: string, private price: number) {
+  constructor(
+    private name: string,
+    private price: number,
+  ) {
     super()
   }
   getPrice() {
@@ -17,16 +23,23 @@ export class Leaf extends Component {
 }
 
 /**
- * 组合节点，默认全价计算
+ * 抽象组合节点，定义了组合节点的公共接口，具体的组合节点需要继承这个类并实现getPrice方法
  */
-export class Composite extends Component {
-  private children: Component[] = []
-  constructor() {
-    super()
-  }
+abstract class CompositeNode extends Component {
+  protected children: Component[] = []
 
   public add(child: Component) {
     this.children.push(child)
+  }
+  abstract getPrice(): number
+}
+
+/**
+ * 组合节点，默认全价计算
+ */
+export class Composite extends CompositeNode {
+  constructor() {
+    super()
   }
 
   getPrice() {
@@ -35,16 +48,11 @@ export class Composite extends Component {
 }
 
 /**
- * 组合节点, 第二件半价
+ * 第二件半价组合节点
  */
-export class HalfPriceComposite extends Component {
-  private children: Component[] = []
+export class HalfPriceComposite extends CompositeNode {
   constructor() {
     super()
-  }
-
-  public add(child: Component) {
-    this.children.push(child)
   }
 
   getPrice() {
@@ -62,16 +70,14 @@ export class HalfPriceComposite extends Component {
 }
 
 /**
- * 组合节点, 满减
+ * 满减组合节点
  */
-export class DiscountPriceComposite extends Component {
-  private children: Component[] = []
-  constructor(private threshold: number, private discount: number) {
+export class DiscountPriceComposite extends CompositeNode {
+  constructor(
+    private threshold: number,
+    private discount: number,
+  ) {
     super()
-  }
-
-  public add(child: Component) {
-    this.children.push(child)
   }
 
   getPrice() {
