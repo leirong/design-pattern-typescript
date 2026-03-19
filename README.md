@@ -21,6 +21,7 @@
 
 ### 行为型模式
 
+- [模版方法模式](src/TemplateMethod/index.ts)
 - [责任链模式](src/ChainOfResponsibility/index.ts)
 - [中介者模式](src/Mediator/index.ts)
 - [观察者模式](src/Observer/index.ts)
