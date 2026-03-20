@@ -27,3 +27,4 @@
 - [观察者模式](src/Observer/index.ts)
 - [状态模式](src/State/index.ts)
 - [策略模式](src/Strategy/index.ts)
+- [访问者模式](src/Visitor/index.ts)
